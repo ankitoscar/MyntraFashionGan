@@ -1,0 +1,327 @@
+ul.yourlist li { float:left; }
+body{
+    margin:0px auto;
+    width: auto;
+    
+}
+.home{
+  background-color: #ff9a76;
+    text-align: center;
+    font-size: 48px;
+    color:azure;
+    display: table;
+    height: 100vhg;
+    width: auto;
+}
+nav ul li
+{
+    list-style-type:none;
+    float: left;
+    padding-left: 10px;
+    height: 100%;
+    color:black;
+    background-color:hotpink;
+    position: relative;
+    width: auto;
+}
+nav ul{
+    float: right;
+    width: 100%;
+}
+nav{
+    width: auto;
+    height:50px;
+    background-color: burlywood;
+    position: fixed;
+}
+nav ul li a{
+    text-decoration: none;
+    width: auto;
+
+    color:ivory;
+}
+.floatleft {
+    float:left;
+    width: auto;
+    
+}
+.floatright {
+    float:right;
+    width: auto;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*div.carousel-item{
+    position:static;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+}
+div.carousel-item{
+    position:static;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+
+/*img[src$="#fit"] {
+    height: 600px;
+    max-width:fit-content;
+    object-fit:fill;
+    max-height: 300vh;
+    width: auto;
+    margin: auto;
+}
+.carousel-inner {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}*/
+.item{
+  max-width:1000px;
+  position: relative;
+  margin: auto;
+  max-height: 700px;
+  background-image: url("https://images.unsplash.com/photo-1499971442178-8c10fdf5f6ac?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBiYWNrZ3JvdW5kJTIwZmFzaGlvbnxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=600&q=60");
+  background-size:contain;
+  background-position:unset;
+  background-attachment:fixed;
+}
+.carousel-item{
+  max-width:1000px;
+  position: relative;
+  margin: auto;
+  max-height: 700px;
+  background-image: url("https://images.unsplash.com/photo-1606486918390-35bb2c83544a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHw%3D&auto=format&fit=crop&w=600&q=60");
+}
+
+.item img{
+    width: 300px;
+    height: 300px;
+    margin: 1rem 0;
+
+
+    perspective: 500px
+    /*height:400px;
+    
+    width: 711px;
+    margin: auto;
+    
+    background-repeat:repeat-x;*/
+}
+.carousel-inner{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.carousel-item img{
+    width: 300px;
+    height: 300px;
+    margin: 1rem 0;
+
+
+    perspective: 500px
+    /*height:400px;
+    
+    width: 711px;
+    margin: auto;
+    
+    background-repeat:repeat-x;*/
+}
+.carousel-caption{
+  right: 10px;
+  left: 300px;
+  top: 200px;
+}
+/*.fas{
+    font-size: x-small;
+    opacity: 100%;
+    width: 5px;
+    display:inline-block;
+    color:white;
+    direction: rtl;
+}
+.far{
+  color: gold;
+}*/
+.blue-text{
+  color: white;
+}
+/* Next & previous buttons */
+.carousel-control-prev, .carousel-control-next {
+  cursor: progress;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: select;
+}
+
+/* Position the "next button" to the right */
+.carousel-control-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+
+
+/* cell number */
+.carousel-item:before {
+  display: inline;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+.backtop .button {
+  display: inline; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+.backtop .button:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.active {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.card img{
+  height: 500px;
+  width: 400px;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+*{
+  scroll-behavior: smooth;
+}
+@media (min-width: 320px) and (max-width: 767px){
+    .header-carousel{
+      width: auto;
+    }
+    .menu{
+      width: auto;
+    }
+    #about{
+        background: chocolate;
+    }
+    .about .inner{
+        width: auto;
+        padding: 25px;
+    }
+    .about .inner p{
+        font-size: 30px;
+        text-align: justify;
+    }
+    .floatleft {
+    float:left;
+    width: auto;
+    
+    }
+    .floatright {
+    float:right;
+    width: auto;
+    }
+    nav ul li
+    {
+        list-style-type:none;
+        float: left;
+        padding-left: 10px;
+        height: 100%;
+        color:black;
+        background-color:hotpink;
+        position: relative;
+        width: auto;
+    }
+    nav ul{
+        float: right;
+        width: auto;
+    }
+    nav{
+        width: auto;
+        height:50px;
+        background-color: burlywood;
+        position: fixed;
+    }
+    nav ul li a{
+        text-decoration: none;
+        width: auto;
+
+        color:ivory;
+    }
+}
+@media(min-width: 768px) and (max-width:1023px){
+    
+}
+@media (min-width: 1024px) and (max-width: 1439px){
+     
+}
