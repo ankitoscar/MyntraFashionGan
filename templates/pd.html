@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>Try On!</title>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='./images/favicon.png') }}" type="image/x-icon">
+
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- Glidejs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
+    <!-- Custom StyleSheet -->
+    <!--<link rel="stylesheet" href="styles.css" />-->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>FashionProduct</title>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+<div class="row">
+    <h2 style="text-align: center; font-size:3rem;"><b>Select a FILE to upload</b></h2>
+    <p><!--
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>-->
+       {% if filename %}
+        <div>
+            <img style="align-items: flex-start;" src="{{ url_for('display_image', filename=filename) }}">
+        </div>
+       {% endif %}
+    <form method="post" action="/uploadpic" enctype="multipart/form-data">
+        <dl>
+            <p>
+                <input type="file" name="file" class="form-control" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+            <input style="align-items: center;" type="submit" value="Submit" class="btn btn-info">
+        </p>
+
+    </form>
+   <a href="{{url_for('displayresult')}}">
+    <button type="button" class="btn btn-success">Try On!</button>
+    </a>
+  </br>
+  </br>
+  </br>
+  </br>
+</div>
+
+<div class="container">
+  <div class="col-md-6">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+<div class="col-md-6">
+  <div class="row">
+  <div class="col-md-12">
+  <div class="title mb-4">
+  <h3>Blue denim shirt</h3>
+  </div>
+  <div class="category mb-4">
+  </div>
+  <div class="rating d-flex text-danger mb-4">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  </div>
+  <div class="price mb-4">
+  <b><span class="mr-1">₹</span><span>400</span></b>
+  </div>
+  <div class="desc ">
+  <p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+  nemo aliquid ipsum
+  dolore amet, nesciunt asperiores sequi mollitia iste recusandae.
+  Dolor eveniet unde
+  possimus quod magnam, nobis quisquam totam, quaerat
+  temporibus iusto tenetur ipsam
+  aperiam. Quasi dolores recusandae aperiam. Aliquam consectetur
+  suscipit eligendi
+  temporibus quae, ducimus accusantium adipisci. Ea maiores eum
+  saepe. Obcaecati
+  explicabo sapiente nihil officia eligendi nesciunt, nisi repellendus
+  autem. Fuga
+  aspernatur quam consequatur dignissimos, error corrupti.
+  Doloremque reiciendis
+  quasi, aut eius beatae id sint quis minus culpa.
+  </p>
+  </div>
+  <div class="qty_section border-top pt-2 mb-4">
+  <label>Quantitiy</label>
+  <div>
+  <div class="mb-0 w-100">
+  <input class="quantity text-center" min="0" max="10"
+  name="quantity" value="1"
+  type="number">
+  </div>
+  </div>
+  </div>
+  <div class="buy">
+  <a href="cartpage.html" class="btn btn-primary shadow">Add to
+  Cart</a>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- ----------------related products starts here---------- -->
+  <section class="related_products py-5 my-5" id="related_products">
+  <div class="title">
+  <h3>Related Products</h3>
+  </div>
+  <div class="row mt-5">
+  <div class="col-md-4 col-6">
+  <div class="border border-dark rounded shadow text-center p-3">
+  <div class="mb-4">
+  <img src="https://i.pinimg.com/originals/db/d5/b2/dbd5b2f17ddf2e548153c4afeef834d0.jpg" class="img img-fluid"
+  alt="image" width="280px">
+  </div>
+  <div>
+  <a href="javascript:;">
+  <h5>Funky Denim Jackets</h5>
+  </a>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4 col-6">
+  <div class="border border-dark rounded shadow text-center p-3">
+  <div class="mb-4">
+  <img src="https://i.pinimg.com/736x/56/92/d9/5692d988cf937391981cb00a8310ad0c.jpg"
+  alt="image" width="200px">
+  </div>
+  <div>
+  <a href="javascript:;">
+  <h5>Denim Overalls</h5>
+  </a>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4 col-6">
+  <div class="border border-dark rounded shadow text-center p-3">
+  <div class="mb-4">
+  <img src="https://static.toiimg.com/thumb/msid-77086849,imgsize-1129751,width-800,height-600,resizemode-75/77086849.jpg" class="img img-fluid"
+  alt="image" width="350px">
+  </div>
+  <div>
+  <a href="javascript:;">
+  <h5>Coloured Denims</h5>
+  </a>
+  </div>
+  </div>
+  </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

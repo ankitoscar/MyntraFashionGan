@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- Glidejs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <title>Try on</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="navigation container">
+          <div class="logo">
+            <h1>Myntra</h1>
+          </div>
+    
+          <div class="menu">
+            <div class="top-nav">
+              <div class="logo">
+                <h1>Walmart</h1>
+              </div>
+              <div class="close">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+    
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="product.html" class="nav-link">Products</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a href="#account" class="nav-link">Account</a>
+              </li>
+              <li class="nav-item">
+                <a href="cart.html" class="nav-link icon"><i class="bx bx-shopping-bag"></i></a>
+              </li>
+            </ul>
+          </div>
+    
+          <a href="cart.html" class="cart-icon">
+            <i class="bx bx-shopping-bag"></i>
+          </a>
+    
+          <div class="hamburger">
+            <i class="bx bx-menu"></i>
+          </div>
+        </div>
+      </nav>
+
+      <section class="section product-detail">
+        <div class="details container-md">
+          <div class="left">
+          <div class="main">
+            <img src="{{ url_for('static', filename='images/person/000602_0.jpg') }}" alt="">
+          </div>
+          </div>
+          
+          <div class="right">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <button class="btn btn-info">Get Back to Product Details</button>
+                 </a>
+                </section>
+          </div>
+
+      <a href="{{url_for('getpic')}}">
+</body>
+</html>
